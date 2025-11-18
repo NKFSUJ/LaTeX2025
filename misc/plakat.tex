@@ -1,0 +1,80 @@
+\documentclass[25pt,a1paper]{tikzposter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{braket}
+\usepackage{tikzducks}
+\usepackage{comment}
+
+\usepgfplotslibrary{external} 
+\tikzexternalize
+
+
+%\usetheme{Board}
+%\useblockstyle[titleinnersep=16pt]{Board}
+
+%\draw[inner sep=0pt, line width=0pt, color=red, fill=backgroundcolor!30!black]
+%(bottomleft) rectangle (topright);
+
+
+\definebackgroundstyle{samplebackgroundstyle}{
+\tikzset{shift={(-0.5\textwidth,-0.5\textheight)}}
+\foreach \i in {1,...,600}
+{
+        \pgfmathtruncatemacro{\y}{(\i - 1) / 22};
+        \pgfmathtruncatemacro{\x}{\i - 22 * \y};
+        \pgfmathtruncatemacro{\label}{\x + 22 * (21 - \y)};
+        \randuck[xshift=2.5*\x cm, yshift=2.5*\y cm];
+}
+}
+\usebackgroundstyle{samplebackgroundstyle}
+
+\title{{\centering Warsztaty \LaTeX{}a}}
+\author{$\bra{N}$aukowe $\hat{K}$oło $\ket{F}$izyków}
+\date{\today}
+\institute{{\centering Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ}}
+
+\begin{document}
+
+\maketitle
+
+\begin{comment}
+\begin{columns}
+
+\column{0.15}
+\column{0.7}
+
+\block{Co to \LaTeX?}{Latex to taki śmieszny system do składania tekstu}
+
+\block{Czy \LaTeX{} jest lepszy niż Word?}{TAK}
+
+\block{Co się stanie jak będę pisał w Wordzie?}{
+%\begin{tikzfigure}
+\centering
+\includegraphics[width=\linewidth]{ktopisze.jpg}
+%\end{tikzfigure}
+}
+
+\block{Kiedy i gdzie?}{
+\begin{itemize}
+\item 6-7 grudnia
+\item FAIS
+\end{itemize}
+}
+
+\block{Będą kaczki?}{
+\centering
+\begin{tikzpicture}
+\duck[scale=2.2,speech={Będą},
+bubblecolour=cyan!20!white,
+laughing]
+\end{tikzpicture}
+}
+
+\column{0.15}
+
+\end{columns}
+\end{comment}
+
+\end{document}
