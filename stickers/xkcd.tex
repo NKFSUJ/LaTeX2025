@@ -39,7 +39,8 @@
     ]
 \addplot [
     fill = black!20!white,
-    draw = black,
+    draw = {black},
+    % style = {thick},
 ]
 coordinates {
     (-36,0) 
@@ -57,6 +58,8 @@ coordinates {
 };
 
 \end{axis}
+
+\draw[ultra thick] (1.65,0) -- (1.65,5.8);
  
 \end{tikzpicture}
  

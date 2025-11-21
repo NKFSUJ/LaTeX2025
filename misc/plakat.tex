@@ -1,4 +1,4 @@
-\documentclass[25pt,a1paper]{tikzposter}
+\documentclass[20pt,a2paper]{tikzposter}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{polski}
@@ -6,75 +6,259 @@
 \usepackage{braket}
 \usepackage{tikzducks}
 \usepackage{comment}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage{qrcode}
+\usepackage{xcolor}
+\usepackage{moresize}
 
-\usepgfplotslibrary{external} 
-\tikzexternalize
+
+% \usepackage{enumitem}
+
+% \usepackage{polyglossia}
+% \setmainlanguage{polish}
+
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
 
 
-%\usetheme{Board}
-%\useblockstyle[titleinnersep=16pt]{Board}
+\usetheme{Board}
+% \useblockstyle[titleinnersep=16pt]{Board}
+\colorlet{framecolor}{purple}
+\usetitlestyle{VerticalShading}
+% \background{violet!10}
+% \usecolorpalette{GreenGrayViolet}
 
-%\draw[inner sep=0pt, line width=0pt, color=red, fill=backgroundcolor!30!black]
+% \defineblockstyle{opacitystyle}{
+%     \tikzset{
+%         draw=none,
+%         fill=blockbodybg.color,
+%         fill opacity=0.3
+%     }
+% }
+% \useblockstyle{opacitystyle}
+% \defineblockstyle{PrzezroczystyBlok}{
+%     titlewidthscale=0.9,
+%     bodywidthscale=1,
+%     titleleft,
+%     titleoffsetx=0pt,
+%     titleoffsety=0pt,
+%     bodyoffsetx=0pt,
+%     bodyoffsety=0pt,
+%     bodyverticalshift=0pt,
+%     roundedcorners=0,
+%     titleinnersep=6mm,
+%     bodyinnersep=1cm
+% }{
+%     \draw[draw=none, fill=blockbodybg.color, fill opacity=0.7] % 0.7 = 70% nieprzezroczystości
+%     (blockbody.south west) rectangle (blockbody.north east);
+% }
+% \useblockstyle{PrzezroczystyBlok}
+% \defineblockstyle{sampleblockstyle}{
+% titlewidthscale=0.9, bodywidthscale=1,titleleft,
+% titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0mm, bodyoffsety=15mm,
+% bodyverticalshift=10mm, roundedcorners=5, linewidth=2pt,
+% titleinnersep=6mm, bodyinnersep=1cm
+% }{
+% \draw[color=framecolor, fill=blockbodybgcolor,
+% rounded corners=\blockroundedcorners] (blockbody.south west)
+% rectangle (blockbody.north east);
+% \ifBlockHasTitle
+% \draw[color=framecolor, fill=blocktitlebgcolor,
+% rounded corners=\blockroundedcorners] (blocktitle.south west)
+% rectangle (blocktitle.north east);
+% \fi
+% }
+
+
+% \draw[inner sep=0pt, line width=0pt, color=red, fill=backgroundcolor!30!black]
 %(bottomleft) rectangle (topright);
+
+\defineblockstyle{TornOut}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=-1.2cm, roundedcorners=0, linewidth=1.2pt,
+    titleinnersep=1cm, bodyinnersep=1cm 
+}{
+    \ifBlockHasTitle%
+        \coordinate (topright) at (blocktitle.north east);
+    \else
+        \coordinate (topright) at (blockbody.north east);
+    \fi%
+    \draw[color=blocktitlebgcolor, fill=blockbodybgcolor,%
+        line width=\blocklinewidth, drop shadow={shadow xshift=0.2cm, shadow yshift=-0.2cm,opacity=0.3}, %
+        decorate, decoration={random steps,segment length=1.5cm,amplitude=0.15cm},
+        % decorate, decoration={penciline,amplitude=0.2cm}
+        fill opacity = 0.85
+    ] (blockbody.south west) rectangle (topright);%
+}
+
 
 
 \definebackgroundstyle{samplebackgroundstyle}{
-\tikzset{shift={(-0.5\textwidth,-0.5\textheight)}}
-\foreach \i in {1,...,600}
-{
-        \pgfmathtruncatemacro{\y}{(\i - 1) / 22};
-        \pgfmathtruncatemacro{\x}{\i - 22 * \y};
-        \pgfmathtruncatemacro{\label}{\x + 22 * (21 - \y)};
+    \tikzset{
+        shift={(-0.5\textwidth,-0.5\textheight)},
+        scale=2.4,
+    }
+    \draw[line width=0pt, bottom color=backgroundcolor, top      color=backgroundcolor!60!white] (bottomleft) rectangle (topright); 
+    \newcommand{\xsize}{7}
+    \newcommand{\ysize}{8}
+    \foreach \i in {1,...,56}
+    {
+        \pgfmathtruncatemacro{\y}{(\i - 1) / \xsize};
+        \pgfmathtruncatemacro{\x}{\i - \xsize * \y - 1};
+        % \pgfmathtruncatemacro{\label}{\x + \xsize * (\xsize - 1 - \y)};
         \randuck[xshift=2.5*\x cm, yshift=2.5*\y cm];
-}
+    }
 }
 \usebackgroundstyle{samplebackgroundstyle}
+% \colorlet{backgroundcolor}{violet}
+\usecolorstyle[colorOne=violet]{Sweden}
 
-\title{{\centering Warsztaty \LaTeX{}a}}
-\author{$\bra{N}$aukowe $\hat{K}$oło $\ket{F}$izyków}
+\title{{\centering \scalebox{1.5}{Warsztaty \LaTeX{}a}}}
+\author{$\bra{N}$aukowe $\hat{K}$oło $\ket{F}$izyków \& {Koło Matematyczno--Przyrodnicze}}
 \date{\today}
 \institute{{\centering Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ}}
 
+\linespread{0.8}
+
 \begin{document}
 
+\colorlet{titlebgcolor}{violet!80!white}
+\colorlet{framecolor}{violet!40!white!60!white}
 \maketitle
 
-\begin{comment}
+% \begin{comment}
 \begin{columns}
 
-\column{0.15}
-\column{0.7}
+\column{0.1}
+\column{0.8}
 
-\block{Co to \LaTeX?}{Latex to taki śmieszny system do składania tekstu}
+% \colorlet{blockbodybgcolor}{{\color{green}\pgfsetfillopacity{0.5}}}
 
-\block{Czy \LaTeX{} jest lepszy niż Word?}{TAK}
+\block{Co to \LaTeX?}{
+    Latex to taki śmieszny system do składania tekstu\\
+% }
+    % \begin{subcolumns}
+    % \subcolumn{0.8}
+    % \block{Zalety}{
+    %     \begin{itemize}
+    %         \raggedright
+    %         \begin{multicols}{2}
+    %         \item wygląda profesjonalnie
+    %         \item wspiera przypisy, bibliografię i~spisy treści
+    %         \item wspiera skomplikowane wzory matematyczne
+    %         \item jest darmowy
+    %         \end{multicols}
+    %     \end{itemize}
+    % }
+    % \subcolumn{0.2}
+    % \block{Wady}{\centering brak\vspace{50pt}}
+    % \end{subcolumns}
+% }
+    % \begin{subcolumns}
+    % \subcolumn{0.8}
+    % \vfill
+    \begin{minipage}[t]{0.5\textwidth}
+        \colorlet{innerblocktitlebgcolor}{green!70!black}
+    \innerblock{Zalety}{
+        \begin{itemize}
+            \raggedright
+            \begin{multicols}{2}
+            \item wygląda profesjonalnie
+            \item wspiera przypisy, bibliografię i~spisy treści
+            \item wspiera skomplikowane wzory matematyczne
+            \item jest darmowy
+            \end{multicols}
+        \end{itemize}
+    }
+    \end{minipage}
+    \hfill
+    % \subcolumn{0.2}
+    \begin{minipage}[t]{0.15\textwidth}
+        \colorlet{innerblocktitlebgcolor}{red!70!black}
+    \innerblock{Wady}{\centering brak\vspace{90pt}}
+    \end{minipage}
+    % \vfill
+    % \end{subcolumns}
+    }
+% \block{Czy \LaTeX{} jest lepszy niż Word?}{TAK}
 
-\block{Co się stanie jak będę pisał w Wordzie?}{
-%\begin{tikzfigure}
-\centering
-\includegraphics[width=\linewidth]{ktopisze.jpg}
-%\end{tikzfigure}
-}
+
+% \block{Co się stanie jak będę pisał w Wordzie?}{
+% %\begin{tikzfigure}
+% \centering
+% \includegraphics[width=0.4\linewidth]{ktopisze.jpg}
+% %\end{tikzfigure}
+% }
 
 \block{Kiedy i gdzie?}{
-\begin{itemize}
-\item 6-7 grudnia
-\item FAIS
+\begin{minipage}[t]{0.65\linewidth}
+\begin{itemize}%[$\leftarrow$]
+\item 5--6 grudnia 2025
+\item Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ, ul.~Łojasiewicza 11
+\item zapisy do ...
 \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.25\linewidth}
+    % \innerblock{}{
+    \centering
+    \duck[santa, beard=white!80!brown,
+        xshift=3cm, scale=3, yshift=-0.5cm]
+    % }
+\end{minipage}
 }
 
-\block{Będą kaczki?}{
-\centering
-\begin{tikzpicture}
-\duck[scale=2.2,speech={Będą},
-bubblecolour=cyan!20!white,
-laughing]
-\end{tikzpicture}
+\block{Program}{
+\begin{minipage}[t]{0.5\linewidth}
+    {\centering \bf Piątek\par}
+    \begin{itemize}
+        \item wprowadzenie
+        \item podstawy
+        \item tryb matematyczny
+        \item tabele
+        \item grafiki
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+    {\centering \bf Sobota\par}
+    \begin{itemize}
+        \item bibliografia
+        \item prezentacje
+        \item tikz
+        \item plakaty
+        \item może coś jeszcze
+    \end{itemize}
+\end{minipage}
+% \end{columns}
 }
 
-\column{0.15}
+% \block{Będą kaczki?}{
+% \centering
+% \begin{tikzpicture}
+% \duck[scale=2.2,speech={Będą},
+% bubblecolour=cyan!20!white,
+% laughing]
+% \end{tikzpicture}
+% }
+
+\begin{subcolumns}
+    \subcolumn{0.3}
+    \subcolumn{0.35}
+    \block{więcej info}{
+        \centering
+        \qrcode[height=5cm]{https://www.youtube.com/watch?v=dQw4w9WgXcQ}
+    }
+    \subcolumn{0.35}
+    \block{zapisy}{
+        \centering
+        \qrcode[height=5cm]{https://www.youtube.com/watch?v=cErgMJSgpv0}
+    }
+\end{subcolumns}
+
+\column{0.1}
 
 \end{columns}
-\end{comment}
+% \end{comment}
 
 \end{document}
