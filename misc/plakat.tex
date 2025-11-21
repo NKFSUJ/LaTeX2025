@@ -106,10 +106,10 @@
     \newcommand{\ysize}{8}
     \foreach \i in {1,...,56}
     {
-        \pgfmathtruncatemacro{\y}{(\i - 1) / \xsize};
-        \pgfmathtruncatemacro{\x}{\i - \xsize * \y - 1};
+        \pgfmathtruncatemacro{\y}{(\i - 1) / \xsize}
+        \pgfmathtruncatemacro{\x}{\i - \xsize * \y - 1}
         % \pgfmathtruncatemacro{\label}{\x + \xsize * (\xsize - 1 - \y)};
-        \randuck[xshift=2.5*\x cm, yshift=2.5*\y cm];
+        \randuck[xshift=2.5*\x cm, yshift=2.5*\y cm]
     }
 }
 \usebackgroundstyle{samplebackgroundstyle}
