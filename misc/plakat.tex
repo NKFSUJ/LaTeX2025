@@ -1,4 +1,4 @@
-\documentclass[20pt,a2paper]{tikzposter}
+\documentclass[25pt,a2paper]{tikzposter}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{polski}
@@ -11,9 +11,10 @@
 \usepackage{qrcode}
 \usepackage{xcolor}
 \usepackage{moresize}
+\usepackage{microtype}
 
-
-% \usepackage{enumitem}
+\usepackage{enumitem}
+\setlist[1]{itemsep=-4pt}
 
 % \usepackage{polyglossia}
 % \setmainlanguage{polish}
@@ -100,7 +101,7 @@
         shift={(-0.5\textwidth,-0.5\textheight)},
         scale=2.4,
     }
-    \draw[line width=0pt, bottom color=backgroundcolor, top      color=backgroundcolor!60!white] (bottomleft) rectangle (topright); 
+    \draw[line width=0pt, bottom color=backgroundcolor, top color=backgroundcolor] (bottomleft) rectangle (topright); 
     \newcommand{\xsize}{7}
     \newcommand{\ysize}{8}
     \foreach \i in {1,...,56}
@@ -112,20 +113,20 @@
     }
 }
 \usebackgroundstyle{samplebackgroundstyle}
-% \colorlet{backgroundcolor}{violet}
 \usecolorstyle[colorOne=violet]{Sweden}
+\colorlet{backgroundcolor}{violet!70!white}
 
 \title{{\centering \scalebox{1.5}{Warsztaty \LaTeX{}a}}}
-\author{$\bra{N}$aukowe $\hat{K}$oło $\ket{F}$izyków \& {Koło Matematyczno--Przyrodnicze}}
+\author{\Large $\bra{N}$aukowe $\hat{K}$oło $\ket{F}$izyków \& {Koło Matematyczno--Przyrodnicze}}
 \date{\today}
-\institute{{\centering Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ}}
+\institute{{\large \centering Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ}}
 
-\linespread{0.8}
+\linespread{0.9}
 
 \begin{document}
 
-\colorlet{titlebgcolor}{violet!80!white}
-\colorlet{framecolor}{violet!60!white!45!white}
+\colorlet{titlebgcolor}{violet!30!white}
+\colorlet{framecolor}{violet!30!white}
 \maketitle
 
 % \begin{comment}
@@ -161,7 +162,7 @@
     % \vfill
     \begin{minipage}[t]{0.5\textwidth}
         \colorlet{innerblocktitlebgcolor}{green!70!black}
-    \innerblock{Zalety}{
+    \innerblock{Zalety}{\normalsize
         \begin{itemize}
             \raggedright
             \begin{multicols}{2}
@@ -177,7 +178,7 @@
     % \subcolumn{0.2}
     \begin{minipage}[t]{0.15\textwidth}
         \colorlet{innerblocktitlebgcolor}{red!70!black}
-    \innerblock{Wady}{\centering \textbullet\ brak\vspace{80pt}}
+    \innerblock{Wady}{\normalsize \centering \textbullet\ brak\vspace{70pt}}
     \end{minipage}
     % \vfill
     % \end{subcolumns}
@@ -195,7 +196,7 @@
 \block{Kiedy i gdzie?}{
 \begin{minipage}[t]{0.65\linewidth}
 \begin{itemize}%[$\leftarrow$]
-\item 5--6 grudnia 2025
+\item \textbf{5--6 grudnia 2025}
 \item Wydział Fizyki, Astronomii i Informatyki Stosowanej UJ, ul.~Łojasiewicza 11
 \item zapisy do ...
 \end{itemize}
@@ -204,14 +205,14 @@
     % \innerblock{}{
     \centering
     \duck[santa, beard=white!80!brown,
-        xshift=3cm, scale=3, yshift=-0.5cm]
+        xshift=3cm, scale=3, yshift=0cm]
     % }
 \end{minipage}
 }
 
 \block{Program}{
 \begin{minipage}[t]{0.5\linewidth}
-    {\centering \bf Piątek\par}
+    {\centering \bf Piątek, 5 grudnia\par}
     \begin{itemize}
         \item wprowadzenie
         \item podstawy
@@ -221,7 +222,7 @@
     \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.5\linewidth}
-    {\centering \bf Sobota\par}
+    {\centering \bf Sobota, 6 grudnia\par}
     \begin{itemize}
         \item bibliografia
         \item prezentacje
