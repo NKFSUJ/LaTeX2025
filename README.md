@@ -1,8 +1,7 @@
 # Warsztaty LaTeXa 2025
 
-**5-6 grudnia 2025**
+**12-13 grudnia 2025**
 
-_Kto pisze w Wordzie, temu śmierdzi w mordzie_
 
 ## Program
 
