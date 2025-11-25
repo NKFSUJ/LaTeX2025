@@ -43,3 +43,7 @@ Wydarzenie współfinansowane przez Radę Kół Naukowych Uniwersytetu Jagiello�
 <img src="misc/KN014.png" width=300> 
 
 Wydarzenie współorganizowane przez Koło Matematyczno-Przyrodnicze Studentów Uniwersytetu Jagiellońskiego
+
+<img src="misc/KN020.png" width=300>
+
+Wydarzenie współorganizowane przez Naukowe Koło Fizyczne Studentów Uniwersytetu Jagiellońskiego
