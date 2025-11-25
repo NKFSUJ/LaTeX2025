@@ -32,7 +32,7 @@ Pizza 13:40-14:20
 
 Tabele 14:30-15:10
 
-Tikz (rysunki i kaczki)
+Tikz (rysunki i kaczki) 15:20-16:50
 
 ## Partnerzy
 
