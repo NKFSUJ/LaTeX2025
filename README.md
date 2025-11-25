@@ -48,4 +48,4 @@ Wydarzenie współorganizowane przez Koło Matematyczno-Przyrodnicze Studentów 
 
 <img src="misc/KN020.png" width=300>
 
-Wydarzenie współorganizowane przez Naukowe Koło Fizyczne Studentów Uniwersytetu Jagiellońskiego
+Wydarzenie współorganizowane przez Naukowe Koło Fizyków Studentów Uniwersytetu Jagiellońskiego
