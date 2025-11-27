@@ -9,7 +9,7 @@ Rejestracja: gdzieś na parterze
 
 Warsztaty: aula A-1-13 (piątek) &  (sobota)
 
-### Piątek, 5 grudnia
+### Piątek, 12 grudnia
 
 Wprowadzenie + podstawy 16:15-17:30
 
@@ -19,7 +19,7 @@ Bibliografia 19:20-20:00
 
 Grafika 20:10-20:50
 
-### Sobota, 6 grudnia :santa:
+### Sobota, 13 grudnia :military_helmet:
 
 Obwody elektryczne 10:30-11:20
 
