@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{
+paperwidth=5.4cm,
+paperheight=5.4cm,
+margin=2mm,
+% showframe
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+\thispagestyle{empty}
+
+\begin{document}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=north west, %anchor is upper left corner of the graphic
+      xshift=-0.2cm, %shifting around
+      yshift=0.2cm] 
+     at (current page.north west) %left upper corner of the page
+     {\includegraphics[width=5.4cm]{images/lew.png}}; 
+\end{tikzpicture}
+
+\end{document}

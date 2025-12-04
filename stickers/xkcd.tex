@@ -1,12 +1,27 @@
-\documentclass[border=0.2cm]{standalone}
+\documentclass[]{article}
  
 % Bar chart drawing library 
 \usepackage{pgfplots} 
 \pgfplotsset{compat=1.18}
+
+\usepackage{geometry}
+\geometry{
+paperwidth=5.4cm,
+paperheight=5.4cm,
+margin=2mm,
+% showframe
+}
+
+
+\thispagestyle{empty}
  
 \begin{document}
+
+\hphantom{text}
+\vspace{4.1cm}
  
 \begin{tikzpicture}
+[transform canvas={scale=0.7}]
 
 
  
@@ -20,7 +35,7 @@
     xmajorticks = false,
     xmin = -36,
     yticklabels={
-        .gif,
+        .gif\hspace{-0.15cm}\ ,
         .jpeg\hspace{-1.7cm}\ ,
         .jpg\hspace{-2.5cm}\ ,
         .pptx\hspace{-2.3cm}\ ,

@@ -1,11 +1,33 @@
-\documentclass[border=1cm]{standalone}
+\documentclass{article}
 
 \usepackage{tikz}
 \usepackage{tikzducks}
 
-\begin{document}
+\usepackage{geometry}
+\geometry{
+paperwidth=5.4cm,
+paperheight=5.4cm,
+margin=2mm,
+% showframe
+}
 
+
+\thispagestyle{empty}
+
+
+
+\begin{document}
+\hphantom{text}
+
+\vspace{1.55cm}
+% 
+\begin{minipage}{1cm}
+\end{minipage}
+\hspace{-0.45cm}
+\begin{minipage}{1cm}
+% 
 \begin{tikzpicture}
+[transform canvas={scale=0.7}]
 \colorlet{skin}{white!45!gray!80!green}
 
 \duck[
@@ -39,7 +61,7 @@
 
       \duck[
         body=brown!50!black,           % Kolor skóry
-        bill=orange!80!black,    % Dziób (lekko przyciemniony, by pasował)
+        bill=orange!70!black,    % Dziób (lekko przyciemniony, by pasował)
         eyebrow=black,           % Groźne/poważne brwi
         jacket=orange!25!lightgray,          % Wewnętrzna tunika (kamizelka)
         tshirt=brown!20!white,
@@ -51,5 +73,7 @@
 \node[align=center] at (3,-0.5) {\Large May the \LaTeX \\\Large be with you};
 
 \end{tikzpicture}
+
+\end{minipage}
 
 \end{document}
