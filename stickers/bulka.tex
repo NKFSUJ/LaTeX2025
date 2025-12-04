@@ -1,13 +1,31 @@
-\documentclass[border=1cm]{standalone}
+\documentclass{article}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage[T1]{fontenc}
 
+\usepackage{geometry}
+\geometry{
+paperwidth=5.4cm,
+paperheight=5.4cm,
+margin=2mm,
+showframe
+}
+
+
+\thispagestyle{empty}
+
 
 \begin{document}
 
+\hphantom{text}
+\vspace{1.25cm}
 
- \begin{tikzpicture}
+\begin{minipage}{1cm}
+\end{minipage}
+\hspace{1.75cm}
+\begin{minipage}{1cm}
+\begin{tikzpicture}
+[transform canvas={scale=0.7}]
 %  \node at (0,0) {\includegraphics[width=10cm]{images/2025-11-17-17-21-58.png}};
 
 
@@ -51,5 +69,6 @@ rounded corners=0.1cm, rotate around={10:(1.2,-1.2)}] (1.2,-0.8) --++ (.2,0) --+
 % \draw[black, thin, step=5cm] (-5,-3) grid (5,3);
 
 \end{tikzpicture}
+\end{minipage}
 
 \end{document}
