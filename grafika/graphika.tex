@@ -29,7 +29,9 @@ columns=flexible,
 breaklines=true
 }
 
-\usepackage{emoji}
+% \usepackage{emo}
+\usepackage{twemojis}
+\newcommand{\emoji}[1]{\scalebox{2}{\twemoji{#1}}}
     \usepackage{bredzenie}
     \usepackage{wrapfig}
 \graphicspath{ {./memy/}{./} }
@@ -146,7 +148,7 @@ s%
 
 \newcommand{\tb}{\textbackslash}
 
-\title{Wstawianie gra\varphi{}ki}
+\title{Wstawianie gra$\phi${}ki}
 \subtitle{od zera do Worda}
 \author[M. Winiarski]{Mateusz (czarny) Winiarski}
 \institute[KMPS UJ]{KMPS UJ, WFAIS}
@@ -171,7 +173,7 @@ s%
 \Large
 \begin{itemize}[<+->]
     \item Krok 1: \texttt{Ctrl}+\texttt{V}
-    \item Krok 2: \emoji{sob}
+    \item Krok 2: {\huge \emoji{loudly crying face}}
     \item Ekskomunika z kościoła kopistów
 \end{itemize}
     
@@ -182,7 +184,7 @@ s%
 Uwierz mi lub nie:
 \begin{itemize}[<+->]
     \item Krok 1: \texttt{Ctrl}+\texttt{V}
-    \item Krok 2: \emoji{smiling-face-with-sunglasses}
+    \item Krok 2: {\Large \emoji{smiling face with sunglasses}}
     \item Najlepszy wynalazek od czasu krojonego chleba
 \end{itemize}
 
@@ -190,6 +192,70 @@ Uwierz mi lub nie:
     \centering
     \includegraphics[width=0.5\textwidth]{mem1.jpg}
 \end{figure}}
+
+    
+\end{frame}
+
+\begin{frame}{Instrukcja krok po kroku}{}
+    \begin{columns}
+        \column{0.5\textwidth}
+
+        {\bf Overleaf:}
+
+        \begin{itemize}
+        
+        \item znajdź obrazek (np. w internecie)
+        \item skopiuj do schowka
+        \item zrób \texttt{Ctrl}+\texttt{V}
+        \item wciśnij \emph{Insert figure}
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{images/2025-12-11-23-29-14.png}
+%  \caption{}
+ \end{figure}
+
+        \end{itemize}
+
+
+        \column{0.5\textwidth}
+        {\bf Jeżeli to nie działa:}
+
+        \begin{itemize}
+            \item pobierz obrazek
+            \item \emph{Insert figure}+\emph{Upload from computer}
+            \begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{images/2025-12-11-23-35-28.png}
+%  \caption{}
+ \end{figure}
+
+            \item pojawi się to okienko co po lewej
+        \end{itemize}
+        \vfill
+        
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]{Bonus: Co zrobić żeby działało w VSCode}
+
+    \begin{itemize}
+        \item zainstaluj rozszerzenie \href{https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image}{Paste Image}
+        \item \texttt{settings.json}
+    \begin{lstlisting}
+    "pasteImage.path": "${currentFileDir}/images",
+    "pasteImage.insertPattern": "\\begin{figure}\n \\centering\n \\includegraphics[width=0.5\\textwidth]{${imageFilePath}}\n \\caption{}\n \\end{figure}",
+    \end{lstlisting}
+        \item \texttt{keybindings.json}
+    \begin{verbatim}
+    {
+        "key": "ctrl+alt+v",
+        "command": "extension.pasteImage",
+        "when": "editorTextFocus"
+    },
+    \end{verbatim}
+    \item u mnie działa
+    \end{itemize}
     
 \end{frame}
 
@@ -361,6 +427,14 @@ Uwierz mi lub nie:
     \end{itemize}
 \end{frame}
 
+\begin{frame}{}
+    \begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{images/2025-12-10-19-21-52.png}
+ \caption{Tak to wygląda jak zrobisz \texttt{blank project} w Overleafie}
+ \end{figure}
+\end{frame}
+
 \begin{frame}[fragile]{No dobra, ale ja chcę mieć tak jak w Wordzie}{}
 
 
@@ -476,7 +550,7 @@ Uwierz mi lub nie:
 \end{SCfigure}\end{verbatim}
     \begin{figure}
         \centering
-        \includegraphics[width=0.5\textwidth]{memy/Zrzut ekranu 2024-12-06 090913.png}
+        \includegraphics[width=0.5\textwidth]{noc.png}
         \caption{Musicie mi uwierzyć że to działa, jest trzecia w nocy, wyskakują mi \emph{dziwne błędy}, a przed przedawkowaniem środków odurzających ratuje mnie tylko doświadczenie}
         % \label{fig:my_label}
     \end{figure}
@@ -518,51 +592,51 @@ Zobacz rysunek \ref{fig:andrzej}.
 
 \section{\LaTeX}
 
-\begin{frame}[fragile]{Multiplikacja}{}
-    % Subfigures:
-    \begin{verbatim}
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=\textwidth]{mem6}
-        \caption{Śmieszny mem}
-        \label{smieszny}
-    \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-        \includegraphics[width=\textwidth]{mem7}
-        \caption{Nieśmieszny mem}
-        \label{niesmieszny}
-    \end{subfigure}
-    \caption{Przykłady memów}
-    \label{memy}
-\end{figure}
-    \end{verbatim}
-\end{frame}
+% \begin{frame}[fragile]{Multiplikacja}{}
+%     % Subfigures:
+%     \begin{verbatim}
+% \begin{figure}
+%     \centering
+%     \begin{subfigure}{0.5\textwidth}
+%         \includegraphics[width=\textwidth]{mem6}
+%         \caption{Śmieszny mem}
+%         \label{smieszny}
+%     \end{subfigure}
+%     \begin{subfigure}{0.5\textwidth}
+%         \includegraphics[width=\textwidth]{mem7}
+%         \caption{Nieśmieszny mem}
+%         \label{niesmieszny}
+%     \end{subfigure}
+%     \caption{Przykłady memów}
+%     \label{memy}
+% \end{figure}
+%     \end{verbatim}
+% \end{frame}
 
 
-\begin{frame}[fragile]{Multiplikacja}{}
-    % Subfigures:
-    % \begin{verbatim}
-\begin{figure}
-    \centering
-    \begin{subfigure}[c]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{mem6}
-        \caption{Śmieszny mem}
-        \label{smieszny}
-    \end{subfigure}
-    \begin{subfigure}[c]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{mem7}
-        \caption{Nieśmieszny mem}
-        \label{niesmieszny}
-    \end{subfigure}
-    \caption{Przykłady żabów}
-    \label{memy}
-\end{figure}
+% \begin{frame}[fragile]{Multiplikacja}{}
+%     % Subfigures:
+%     % \begin{verbatim}
+% \begin{figure}
+%     \centering
+%     \begin{subfigure}[c]{0.45\textwidth}
+%         \includegraphics[width=\textwidth]{mem6}
+%         \caption{Śmieszny mem}
+%         \label{smieszny}
+%     \end{subfigure}
+%     \begin{subfigure}[c]{0.45\textwidth}
+%         \includegraphics[width=\textwidth]{mem7}
+%         \caption{Nieśmieszny mem}
+%         \label{niesmieszny}
+%     \end{subfigure}
+%     \caption{Przykłady żabów}
+%     \label{memy}
+% \end{figure}
 
-Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{niesmieszny}, jak i do całego obrazka \ref{memy}.
+% Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{niesmieszny}, jak i do całego obrazka \ref{memy}.
 
-    % \end{verbatim}
-\end{frame}
+%     % \end{verbatim}
+% \end{frame}
 
 \begin{frame}{A czy można robić obrazki samemu?}{}
 \setbeamercovered{invisible}
