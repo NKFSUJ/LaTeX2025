@@ -11,33 +11,33 @@ Warsztaty: aula A-1-13 (piątek) &  (sobota)
 
 ### Piątek, 12 grudnia
 
-Wprowadzenie + podstawy 16:15-17:30
+Wprowadzenie + podstawy 16:15-17:30 (Karolina Krok :black_cat:)
 
-Tryb matematyczny 17:40-19:10
+[Tryb matematyczny](matma) 17:40-19:10 (Dominik Piasecki :duck:)
 
-Bibliografia 19:20-20:05
+Bibliografia 19:20-20:05 (Patryk Liniewicz :parrot:)
 
-Grafika 20:15-20:55
+Grafika 20:15-20:55 (Mateusz Winiarski :penguin:)
 
 ### Sobota, 13 grudnia :military_helmet:
 
-Obwody elektryczne 10:30-11:20
+Obwody elektryczne 10:30-11:20 (Grzegorz Żmija :snake:)
 
-Tryb chemiczny 11:30-12:30
+Tryb chemiczny 11:30-12:30 (Natalia Gajewska :cat:)
 
-Prezentacje 12:40-13:40
+Prezentacje 12:40-13:40 (Krzysztof Prościński :ladybird:)
 
-Pizza 13:40-14:20
+Pizza 13:40-14:20 :pizza:
 
-Tabele 14:30-15:10
+Tabele 14:30-15:10 (Dawid Zapolski :otter:)
 
-Tikz (rysunki i kaczki) 15:20-16:50
+Tikz (rysunki i kaczki) 15:20-16:50 (Mateusz Winiarski :penguin:)
 
 ## Partnerzy
 
 <img src="misc/boczny-kolor.png" width=300> 
 
-Wydarzenie współfinansowane przez Radę Kół Naukowych Uniwersytetu Jagiellońskiego
+Wydarzenie **niefinansowane** przez Radę Kół Naukowych Uniwersytetu Jagiellońskiego
 
 
 <img src="misc/KN014.png" width=300> 
