@@ -599,50 +599,93 @@ Zobacz rysunek \ref{fig:andrzej}.
 
 \section{\LaTeX}
 
-\begin{frame}[fragile]{Multiplikacja}{}
+\begin{frame}[fragile]{\texttt{subfigure}: kilka obrazków obok siebie}{}
     % Subfigures:
     \begin{verbatim}
-\begin{figure}
+% \usepackage{subcaption}
+\begin{figure}[h]
     \centering
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{mem6}
-        \caption{Śmieszny mem}
+        \caption{Śmieszny lew}
         \label{smieszny}
     \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
+    \begin{subfigure}{0.45\textwidth}
         \includegraphics[width=\textwidth]{mem7}
-        \caption{Nieśmieszny mem}
-        \label{niesmieszny}
+        \caption{Smutny lew}
+        \label{smutny}
     \end{subfigure}
-    \caption{Przykłady memów}
+    \caption{Przykłady lewów}
     \label{memy}
 \end{figure}
     \end{verbatim}
 \end{frame}
 
 
-\begin{frame}[fragile]{Multiplikacja}{}
+
+
+\begin{frame}[fragile]{\texttt{subfigure}: kilka obrazków obok siebie}{}
     % Subfigures:
     % \begin{verbatim}
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \begin{subfigure}[c]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{mem6}
-        \caption{Śmieszny mem}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{images/2025-12-12-11-16-21.png}
+        \caption{Śmieszny lew}
         \label{smieszny}
     \end{subfigure}
-    \begin{subfigure}[c]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{mem7}
-        \caption{Nieśmieszny mem}
-        \label{niesmieszny}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{images/2025-12-12-11-17-44.png}
+        \caption{Smutny lew}
+        \label{smutny}
     \end{subfigure}
-    \caption{Przykłady żabów}
-    \label{memy}
+    \caption{Przykłady lewów}
+    \label{lewy}
 \end{figure}
 
-Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{niesmieszny}, jak i do całego obrazka \ref{memy}.
+Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{smutny}, jak i do całego obrazka \ref{lewy}.
 
     % \end{verbatim}
+\end{frame}
+
+\begin{frame}{\texttt{minipage}: kiedy wszystko zawiedzie}{}
+\begin{verbatim}  
+\begin{minipage}[t]{0.3\textwidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{schlop1.png}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+ \centering
+ \includegraphics[width=0.9\textwidth]{schlop2.png}
+\end{minipage}
+
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}{\texttt{minipage}: kiedy wszystko zawiedzie}{}
+    
+\begin{minipage}[t]{0.3\textwidth}
+% \begin{figure}
+ \centering
+ \includegraphics[width=0.9\textwidth]{images/2025-12-12-11-59-26.png}
+%  \caption{}
+%  \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+% \begin{figure}
+ \centering
+ \includegraphics[width=0.9\textwidth]{images/2025-12-12-12-18-03.png}
+%  \caption{}
+%  \end{figure}
+\end{minipage}
+
+% i teraz obok mogę se wpisać tekst lalalala. 
+pamiętaj że jak robisz \texttt{column}, \texttt{minipage},\dots to \texttt{\tb{textwidth}} zmienia się na szerokość tekstu w danym miejscu
+% \bredzenie{159}
+
+
 \end{frame}
 
 \begin{frame}{A czy można robić obrazki samemu?}{}
