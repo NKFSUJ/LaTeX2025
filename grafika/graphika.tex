@@ -39,6 +39,7 @@ breaklines=true
 \usepackage[rightcaption]{sidecap}
 % \usepackage{float}
 \setbeamertemplate{caption}[numbered]
+% \useoutertheme[subsection=false]{miniframes}
 
 
 
@@ -148,7 +149,7 @@ s%
 
 \newcommand{\tb}{\textbackslash}
 
-\title{Wstawianie gra$\phi${}ki}
+\title{Wstawianie gra$\varphi${}ki}
 \subtitle{od zera do Worda}
 \author[M. Winiarski]{Mateusz (czarny) Winiarski}
 \institute[KMPS UJ]{KMPS UJ, WFAIS}
@@ -158,6 +159,16 @@ s%
 
 \section{In}
 \frame{\titlepage}
+
+\begin{frame}{Prezentacja}{}
+    Link do prezentacji:
+
+    \url{https://github.com/NKFSUJ/LaTeX2025/tree/master/grafika/graphika.pdf}
+
+    \vspace{0.5cm}
+
+    \scalebox{1.5}{\qrcode{https://github.com/NKFSUJ/LaTeX2025/tree/master/grafika/graphika.pdf}}
+\end{frame}
 
 \begin{frame}{Ostrzeżenie}{}
 \begin{itemize}[<+->]
@@ -376,22 +387,23 @@ Uwierz mi lub nie:
         tak naprawdę to \texttt{clip} obcina
     \end{itemize} 
 
-\column{0.5\textwidth}
+\column{0.6\textwidth}
 {\small
+    % \begin{figure}
+    %     \centering
+    %     \includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{mem13}
+    %     \verb|\includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{majonez.png}|
+    % \end{figure}
     \begin{figure}
         \centering
-        \includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{mem13}
-        \verb|\includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{majonez.png}|
+        \includegraphics[trim={1cm 1cm 0 0}, clip,width=0.5\linewidth]{mem13}
+        \texttt{\tb{}includegraphics[trim=\{1cm 1cm 0 0\}, clip, width=0.75\tb{}linewidth] \{majonez.png\}}
     \end{figure}
     \begin{figure}
         \centering
-        \includegraphics[trim={1cm 1cm 0 0}, clip,width=0.75\linewidth]{mem13}
-        \verb|\includegraphics[trim={1cm 1cm 0 0}, clip, width=0\linewidth]{majonez.png}|
-    \end{figure}
-    \begin{figure}
-        \centering
-        \includegraphics[trim={1cm 0cm 10cm 2cm}, clip,width=0.5\linewidth]{mem13}
-        \verb|\includegraphics[trim={1cm 0cm 10cm 2cm}, clip, width=0\linewidth]{majonez.png}|
+        \includegraphics[trim={0cm 0cm 13cm 0cm}, clip,width=0.33\linewidth]{mem13}
+        \texttt{\tb{}includegraphics[trim=\{0 0 13cm 0\}, clip, width=0.5\tb{}linewidth] \{majonez.png\}}
+        % \verb|\includegraphics[trim={0cm 0cm 13cm 0cm}, clip, width=0.5\linewidth]{majonez.png}|
     \end{figure}
 }
     \end{columns} 
