@@ -11,7 +11,7 @@ Warsztaty: aula A-1-13 (piątek) &  (sobota)
 
 ### Piątek, 12 grudnia
 
-Wprowadzenie + podstawy 16:15-17:30 (Karolina Krok 🐈‍⬛)
+[Wprowadzenie + podstawy](wprowadzenie/Wprowadzenie_podstawy.pdf) 16:15-17:30 (Karolina Krok 🐈‍⬛)
 
 [Tryb matematyczny](matma/Tryb_Matematyczny_prezentacja.pdf) 17:40-19:10 (Dominik Piasecki 🦆)
 
@@ -23,7 +23,7 @@ Wprowadzenie + podstawy 16:15-17:30 (Karolina Krok 🐈‍⬛)
 
 Obwody elektryczne 10:30-11:20 (Grzegorz Żmija 🐍)
 
-Tryb chemiczny 11:30-12:30 (Natalia Gajewska 🐱)
+[Tryb chemiczny](chemia/tryb_chemiczny.pdf) 11:30-12:30 (Natalia Gajewska 🐱)
 
 Prezentacje 12:40-13:40 (Krzysztof Prościński 🐞)
 
