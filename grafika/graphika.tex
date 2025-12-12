@@ -196,6 +196,15 @@ Uwierz mi lub nie:
     
 \end{frame}
 
+\begin{frame}{}
+    \begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{images/2025-12-10-19-21-52.png}
+ \caption{Tak to wygląda jak zrobisz \texttt{blank project} w Overleafie}
+ \end{figure}
+\end{frame}
+
+
 \begin{frame}{Instrukcja krok po kroku}{}
     \begin{columns}
         \column{0.5\textwidth}
@@ -232,7 +241,7 @@ Uwierz mi lub nie:
             \item pojawi się to okienko co po lewej
         \end{itemize}
         \vfill
-        
+
     \end{columns}
 
 \end{frame}
@@ -310,9 +319,9 @@ Uwierz mi lub nie:
         \item \texttt{[width=5cm]}
         \item \texttt{[width=5cm, height=4cm]}
         \item \texttt{[width=\tb{}textwidth]}
-        \item \texttt{[width=\tb{}linewidth]}
-        \item \texttt{[width=\tb{}columnwidth]}
-        \item \texttt{[width=\tb{}paperwidth]}
+        \item \texttt{[width=0.3\tb{}linewidth]}
+        \item \texttt{[width=.5\tb{}columnwidth]}
+        \item \texttt{[width=1.2\tb{}paperwidth]}
     \end{itemize}\pause
     Opcja \texttt{scale}:
     \begin{itemize}
@@ -349,9 +358,9 @@ Uwierz mi lub nie:
  \end{columns} 
 \end{frame}
 
-\begin{frame}{I teraz możemy zacząć się bawić II}{}
+\begin{frame}[fragile]{I teraz możemy zacząć się bawić II}{}
 \begin{columns}
-\column{0.6\textwidth}
+\column{0.5\textwidth}
     Opcja \texttt{trim}:
     \begin{itemize}%[<+->]
         \item \texttt{[trim= \{1cm 2cm 3cm 4cm\}]}\\
@@ -367,23 +376,27 @@ Uwierz mi lub nie:
         tak naprawdę to \texttt{clip} obcina
     \end{itemize} 
 
-\column{0.4\textwidth}
-
+\column{0.5\textwidth}
+{\small
     \begin{figure}
         \centering
-        \includegraphics[trim={1cm 15cm 0 0}, clip, width=\linewidth]{mem12}
+        \includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{mem13}
+        \verb|\includegraphics[trim={1cm 15cm 0 0}, clip, width=0.5\linewidth]{majonez.png}|
     \end{figure}
     \begin{figure}
         \centering
-        \includegraphics[trim={1cm 1cm 0 0}, clip,width=0.75\linewidth]{mem12}
+        \includegraphics[trim={1cm 1cm 0 0}, clip,width=0.75\linewidth]{mem13}
+        \verb|\includegraphics[trim={1cm 1cm 0 0}, clip, width=0\linewidth]{majonez.png}|
     \end{figure}
     \begin{figure}
         \centering
-        \includegraphics[trim={1cm 0cm 10cm 2cm}, clip,width=0.5\linewidth]{mem12}
+        \includegraphics[trim={1cm 0cm 10cm 2cm}, clip,width=0.5\linewidth]{mem13}
+        \verb|\includegraphics[trim={1cm 0cm 10cm 2cm}, clip, width=0\linewidth]{majonez.png}|
     \end{figure}
-
+}
     \end{columns} 
 \end{frame}
+
 
 \begin{frame}{I teraz możemy zacząć się bawić III}{}
     Opcja \texttt{angle}:
@@ -427,13 +440,6 @@ Uwierz mi lub nie:
     \end{itemize}
 \end{frame}
 
-\begin{frame}{}
-    \begin{figure}
- \centering
- \includegraphics[width=0.8\textwidth]{images/2025-12-10-19-21-52.png}
- \caption{Tak to wygląda jak zrobisz \texttt{blank project} w Overleafie}
- \end{figure}
-\end{frame}
 
 \begin{frame}[fragile]{No dobra, ale ja chcę mieć tak jak w Wordzie}{}
 
@@ -441,6 +447,7 @@ Uwierz mi lub nie:
 
     \begin{verbatim}
 % \usepackage{wrapfig}
+% \usepackage{bredzenie} -- polskie lorem ipsum
 \begin{wrapfigure}{r}{0.3\textwidth}
     \centering
     \includegraphics[width=0.25\textwidth]{meme}
@@ -592,51 +599,51 @@ Zobacz rysunek \ref{fig:andrzej}.
 
 \section{\LaTeX}
 
-% \begin{frame}[fragile]{Multiplikacja}{}
-%     % Subfigures:
-%     \begin{verbatim}
-% \begin{figure}
-%     \centering
-%     \begin{subfigure}{0.5\textwidth}
-%         \includegraphics[width=\textwidth]{mem6}
-%         \caption{Śmieszny mem}
-%         \label{smieszny}
-%     \end{subfigure}
-%     \begin{subfigure}{0.5\textwidth}
-%         \includegraphics[width=\textwidth]{mem7}
-%         \caption{Nieśmieszny mem}
-%         \label{niesmieszny}
-%     \end{subfigure}
-%     \caption{Przykłady memów}
-%     \label{memy}
-% \end{figure}
-%     \end{verbatim}
-% \end{frame}
+\begin{frame}[fragile]{Multiplikacja}{}
+    % Subfigures:
+    \begin{verbatim}
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{mem6}
+        \caption{Śmieszny mem}
+        \label{smieszny}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \includegraphics[width=\textwidth]{mem7}
+        \caption{Nieśmieszny mem}
+        \label{niesmieszny}
+    \end{subfigure}
+    \caption{Przykłady memów}
+    \label{memy}
+\end{figure}
+    \end{verbatim}
+\end{frame}
 
 
-% \begin{frame}[fragile]{Multiplikacja}{}
-%     % Subfigures:
-%     % \begin{verbatim}
-% \begin{figure}
-%     \centering
-%     \begin{subfigure}[c]{0.45\textwidth}
-%         \includegraphics[width=\textwidth]{mem6}
-%         \caption{Śmieszny mem}
-%         \label{smieszny}
-%     \end{subfigure}
-%     \begin{subfigure}[c]{0.45\textwidth}
-%         \includegraphics[width=\textwidth]{mem7}
-%         \caption{Nieśmieszny mem}
-%         \label{niesmieszny}
-%     \end{subfigure}
-%     \caption{Przykłady żabów}
-%     \label{memy}
-% \end{figure}
+\begin{frame}[fragile]{Multiplikacja}{}
+    % Subfigures:
+    % \begin{verbatim}
+\begin{figure}
+    \centering
+    \begin{subfigure}[c]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{mem6}
+        \caption{Śmieszny mem}
+        \label{smieszny}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{mem7}
+        \caption{Nieśmieszny mem}
+        \label{niesmieszny}
+    \end{subfigure}
+    \caption{Przykłady żabów}
+    \label{memy}
+\end{figure}
 
-% Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{niesmieszny}, jak i do całego obrazka \ref{memy}.
+Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{smieszny}, do obrazka \ref{niesmieszny}, jak i do całego obrazka \ref{memy}.
 
-%     % \end{verbatim}
-% \end{frame}
+    % \end{verbatim}
+\end{frame}
 
 \begin{frame}{A czy można robić obrazki samemu?}{}
 \setbeamercovered{invisible}
@@ -648,7 +655,7 @@ Zobacz rysunek \ref{fig:andrzej}.
   \fill[cyan!20!white] (-0.2,1.54) -- (0.2,1.35) -- (0.0,1.6) -- cycle;
 	\node at (-1.6,1.8) {O tym będzie jutro};
     \end{tikzpicture}
-    \caption{sobota, 15:50}
+    \caption{sobota, 15:20}
     \end{figure}
     
 \end{frame}
