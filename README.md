@@ -11,27 +11,27 @@ Warsztaty: aula A-1-13 (piątek) &  (sobota)
 
 ### Piątek, 12 grudnia
 
-Wprowadzenie + podstawy 16:15-17:30 (Karolina Krok :black_cat:)
+Wprowadzenie + podstawy 16:15-17:30 (Karolina Krok 🐈‍⬛)
 
-[Tryb matematyczny](matma) 17:40-19:10 (Dominik Piasecki :duck:)
+[Tryb matematyczny](matma/Tryb_Matematyczny_prezentacja.pdf) 17:40-19:10 (Dominik Piasecki 🦆)
 
-Bibliografia 19:20-20:05 (Patryk Liniewicz :parrot:)
+Bibliografia 19:20-20:05 (Patryk Liniewicz 🦜)
 
-Grafika 20:15-20:55 (Mateusz Winiarski :penguin:)
+[Grafika](grafika/graphika.pdf) 20:15-20:55 (Mateusz Winiarski 🐧)
 
-### Sobota, 13 grudnia :military_helmet:
+### Sobota, 13 grudnia 🪖 🧯
 
-Obwody elektryczne 10:30-11:20 (Grzegorz Żmija :snake:)
+Obwody elektryczne 10:30-11:20 (Grzegorz Żmija 🐍)
 
-Tryb chemiczny 11:30-12:30 (Natalia Gajewska :cat:)
+Tryb chemiczny 11:30-12:30 (Natalia Gajewska 🐱)
 
-Prezentacje 12:40-13:40 (Krzysztof Prościński :ladybird:)
+Prezentacje 12:40-13:40 (Krzysztof Prościński 🐞)
 
-Pizza 13:40-14:20 :pizza:
+Pizza 13:40-14:20 🍕
 
-Tabele 14:30-15:10 (Dawid Zapolski :otter:)
+Tabele 14:30-15:10 (Dawid Zapolski 🦦)
 
-Tikz (rysunki i kaczki) 15:20-16:50 (Mateusz Winiarski :penguin:)
+Tikz (rysunki i kaczki) 15:20-16:50 (Mateusz Winiarski 🐧)
 
 ## Partnerzy
 
