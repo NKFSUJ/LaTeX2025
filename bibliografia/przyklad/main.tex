@@ -1,0 +1,69 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{			amsmath,
+						amssymb,
+						textcomp,
+						gensymb,
+						physics,
+						graphicx,
+						xcolor,
+						url,
+						hyperref,
+						tocloft
+}
+\hypersetup{colorlinks = true, citecolor=violet}
+% \usepackage[giveninits=true, style=alphabetic, sorting=none, backend=biber, maxbibnames=3]{biblatex}
+\usepackage[style=numeric, maxbibnames=3, giveninits=true, backend=biber, sorting=none]{biblatex}
+\usepackage[a4paper]{geometry}
+\author{}
+\date{}
+\title{przykładowy dokument do bibliografii}
+
+\addbibresource{biblio.bib}
+
+\pdfsuppresswarningpagegroup=1
+
+\renewcommand{\cftsubsecfont}{\normalfont\hypersetup{linkcolor=orange}}
+
+\begin{document}
+	    
+\maketitle
+% \hypersetup{linkcolor=blue}
+
+\tableofcontents
+
+\section{Pierwszy rozdział}
+Lorem ipsum dolor sit amet \cite{abbott2009ligo}, consectetur adipiscing elit. Curabitur rutrum quam a dignissim tincidunt. Nunc a faucibus lacus, vitae suscipit nisi. Suspendisse tempor odio at vulputate vestibulum. Maecenas sed faucibus dui. Nulla nec erat nec risus ultrices accumsan ac non mi. Morbi vestibulum quam quis erat aliquam, scelerisque vestibulum neque bibendum. Curabitur a pulvinar purus, at cursus mi. Nulla nibh ex, tincidunt vitae tempor id, pretium vitae dui. Vestibulum at vestibulum quam. Duis sed nibh tellus. Morbi tristique ornare venenatis. \cite{cieslik2022revisiting}
+\subsection{podrozdział}
+Donec a bibendum orci. Pellentesque erat sem, finibus sit amet molestie a, bibendum at turpis. Sed eu tincidunt lorem. Proin eleifend sit amet elit sed iaculis. Quisque eu sagittis mauris. Pellentesque magna risus, egestas ac aliquam tincidunt, vehicula sit amet nulla. Curabitur laoreet et nibh sed egestas. Nulla finibus massa interdum, venenatis odio in, pulvinar velit.
+
+Pellentesque fermentum commodo hendrerit. Fusce pretium nisl sed lacinia varius. Praesent non augue dolor. In et turpis eu magna tempus dapibus ut quis arcu. Suspendisse finibus pulvinar arcu, quis vulputate sem congue sit amet. Praesent id enim et metus lobortis auctor. Vestibulum feugiat gravida feugiat~\cite{cieslik2022revisiting}.
+
+\section{Drugi rozdział}
+Aliquam leo metus, finibus et porta ac, facilisis ac nibh. Fusce vulputate augue quis lacinia tincidunt. Etiam sed sem eros. Integer risus dui, porta vitae urna eu, hendrerit commodo ex. Mauris nulla erat, fermentum id lacus sit amet, consectetur ultrices ipsum. Nam in sapien eros. Nunc gravida mauris vitae ligula malesuada ultrices. Curabitur pretium, est a eleifend pellentesque, nisl nisi fermentum purus, vitae iaculis neque nulla ut velit. Etiam eget eros enim. Ut eu dapibus sem, eget consectetur nisi. Fusce rutrum luctus dui, at porttitor arcu sagittis vitae.
+
+Donec mattis orci vitae dolor congue fermentum. Pellentesque quis mauris bibendum, consectetur quam ac, rutrum urna. In iaculis arcu mauris, at molestie nulla elementum sed. Fusce diam libero, congue ac lacus vel, lobortis fringilla lorem. Sed tempor quis odio quis consectetur. Maecenas eu tincidunt erat. Morbi fermentum urna ac ipsum mattis, at pretium elit volutpat. Vivamus ut tortor in purus tristique aliquet. Ut sed turpis vehicula, ornare nulla ut, consectetur mauris. Fusce ullamcorper nulla lorem, a elementum nulla sollicitudin ut. Duis sed sem a dui lobortis aliquet vel nec neque.
+
+Sed facilisis neque fringilla dui convallis cursus. Etiam non venenatis ex. Proin ac suscipit ipsum. Etiam consequat sollicitudin libero a finibus. Nam pulvinar semper pulvinar. Nam id nibh gravida, porttitor urna sed, tempor velit. Duis nec nibh malesuada, feugiat tellus ut, pellentesque elit. Pellentesque ut pharetra lacus, vitae ultricies purus.
+
+Nam libero justo, semper sed hendrerit in, pretium nec libero. Proin laoreet posuere massa a semper. Nullam laoreet interdum nibh, sit amet tempus ipsum ultricies efficitur. Fusce consequat eget libero et volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse porttitor rhoncus porta. Praesent bibendum nibh fermentum, bibendum nisi a, mattis augue. Suspendisse scelerisque tellus vel lacinia condimentum.
+
+Donec placerat sodales eros, nec posuere tellus pharetra eget. Donec imperdiet quam ultricies dui tempus bibendum. Nam lacinia, ipsum ac semper cursus, quam velit sodales nibh, sit amet commodo tellus ex id dolor. Integer nec ex lectus. Proin placerat nunc vel dolor pharetra dictum. Cras vitae felis a risus semper egestas a eu nibh. Morbi sed commodo augue. In varius mattis condimentum. Quisque bibendum dignissim augue, in euismod enim rhoncus non. Aenean malesuada ante id sapien elementum efficitur. Sed tellus ipsum, ultrices eu accumsan ac, sodales at mi. Donec ac congue lorem, ac condimentum urna.
+
+Donec dictum est sapien, eu rhoncus ligula mollis ut. Proin pulvinar est nec felis feugiat bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus auctor ullamcorper ex, quis sollicitudin felis gravida ut. Cras faucibus massa velit, eget egestas magna ornare congue. Curabitur id augue eu mauris mattis semper. Phasellus id dictum ipsum. Etiam et ornare lorem. Etiam ut augue eget sapien vehicula aliquam eget nec purus. Morbi porta sagittis maximus. Phasellus at nulla sed sem scelerisque tempus ornare et ante.
+
+Cras vel viverra dui. Curabitur non mi et diam sagittis condimentum. Aliquam in laoreet magna. In viverra leo tellus, vitae hendrerit mauris congue posuere. Etiam fringilla eleifend massa. Cras commodo, augue a bibendum consectetur, libero sem egestas dui, sit amet scelerisque urna lorem non enim. Sed sit amet pulvinar sapien. Pellentesque id tellus vitae orci lacinia varius sed vel neque. Nam vitae posuere turpis. Nam sagittis commodo tortor, eu posuere nunc. Nullam metus ante, eleifend sit amet nisi eget, aliquam molestie magna. Vestibulum nec dui ac tellus blandit vulputate at in justo. Vivamus consectetur sodales iaculis. Sed feugiat arcu sit amet lacinia fermentum. Suspendisse potenti. Donec et luctus sem, nec posuere sapien.
+
+Etiam et placerat est. Pellentesque fringilla egestas pellentesque. Maecenas pulvinar tempus augue, et scelerisque mauris elementum ut. Cras euismod rhoncus nibh, eget condimentum justo sagittis vitae. Fusce varius est mi, id rhoncus ligula ultricies non. Nunc faucibus congue neque, quis aliquet velit vulputate quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent rhoncus auctor elit. Nam rutrum dapibus diam nec iaculis. Quisque at nisi vulputate dui porttitor lacinia. Suspendisse potenti. Duis quis ex mi. Nam blandit nulla at dui lobortis ullamcorper. Pellentesque hendrerit viverra leo et tempor. Phasellus in auctor velit. Ut porttitor viverra hendrerit.
+
+Praesent in lacinia mi, id sagittis tellus. Vivamus at lacinia ante. Pellentesque dui nibh, consequat vitae nunc scelerisque, pharetra commodo lorem. Praesent velit dolor, faucibus a euismod nec, condimentum nec mauris. Phasellus id tellus ex. Cras dignissim ex tortor, at pharetra dolor auctor tincidunt. Phasellus eleifend dictum nunc ac convallis. Suspendisse ligula felis, rhoncus vulputate est dignissim, sagittis tristique nisl. Nullam tristique placerat urna at convallis. Curabitur lacinia a lorem quis hendrerit. Phasellus elit quam, dapibus eget facilisis in, egestas id nisi. Ut non varius leo. In porta tortor eget dui vehicula rhoncus. Duis at varius nisl, ut egestas leo. Curabitur iaculis volutpat orci tincidunt elementum. 
+
+% \printbibliography
+
+\printbibliography[type=article,title={Same artykuły, ale z fizyki},keyword={physics},heading=bibintoc]
+\printbibliography[type=article,title={Same artykuły, ale z matematyki},keyword={mathematics}]
+
+\end{document}
