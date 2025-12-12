@@ -649,15 +649,15 @@ Jak można sprawdzić, można \texttt{\tb{ref}}ować zarówno do obrazka \ref{sm
     % \end{verbatim}
 \end{frame}
 
-\begin{frame}{\texttt{minipage}: kiedy wszystko zawiedzie}{}
+\begin{frame}[fragile]{\texttt{minipage}: kiedy wszystko zawiedzie}{}
 \begin{verbatim}  
 \begin{minipage}[t]{0.3\textwidth}
- \centering
- \includegraphics[width=0.9\textwidth]{schlop1.png}
+    \centering
+    \includegraphics[width=0.9\textwidth]{schlop1.png}
 \end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
- \centering
- \includegraphics[width=0.9\textwidth]{schlop2.png}
+    \centering
+    \includegraphics[width=0.9\textwidth]{schlop2.png}
 \end{minipage}
 
 \end{verbatim}
@@ -686,6 +686,60 @@ pamiętaj że jak robisz \texttt{column}, \texttt{minipage},\dots to \texttt{\tb
 % \bredzenie{159}
 
 
+\end{frame}
+
+\begin{frame}{kiedy wszystko \emph{wszystko zawiedzie}}{}
+
+    \begin{itemize}
+        \item \texttt{\tb{hspace\{2cm\}}} -- horizontal space
+        \item \texttt{\tb{vspace\{2cm\}}} -- vertical space
+        \item \texttt{\tb{hfill}} -- horizontal fill
+        \item \texttt{\tb{vfill}} -- vertical fill
+        \item \texttt{\tb{hphantom\{text\}}} -- horizontal phantom (robi odstęp o długości podanego tekstu)
+    \end{itemize}
+    \pause
+    nie odpowiadam za kompletne rozjechanie struktury dokumentu po użyciu powyższych komend, używasz na własną odpowiedzialność
+\end{frame}
+
+\begin{frame}[fragile]{...czyli jak zniszczyć swoje zdrowie psychiczne}{}
+
+\begin{verbatim}
+    
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{schlop1.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \vspace{-3.7cm} % to jest prześcieradło z mojej dupy
+    \includegraphics[width=0.9\textwidth]{schlop2.png}
+\end{minipage}
+
+\end{verbatim}
+
+{\centering
+powodzenia lol
+}
+\end{frame}
+
+\begin{frame}{...czyli jak zniszczyć swoje zdrowie psychiczne}{}
+    
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/2025-12-12-11-59-26.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+    \centering
+    % \hphantom{text}
+    \vspace{-3.7cm}
+    \includegraphics[width=0.9\textwidth]{images/2025-12-12-12-18-03.png}
+\end{minipage}
+
+{\centering
+powodzenia lol
+}
 \end{frame}
 
 \begin{frame}{A czy można robić obrazki samemu?}{}
