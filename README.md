@@ -29,7 +29,7 @@ Obwody elektryczne 10:30-11:20 (Grzegorz Żmija 🐍)
 
 [Pizza](https://www.youtube.com/watch?v=rHnRs54hv4o) 13:40-14:20 🍕
 
-Tabele 14:30-15:10 (Dawid Zapolski 🦦)
+[Tabele](tabele/main.pdf) 14:30-15:10 (Dawid Zapolski 🦦)
 
 Tikz (rysunki i kaczki) 15:20-16:50 (Mateusz Winiarski 🐧)
 
