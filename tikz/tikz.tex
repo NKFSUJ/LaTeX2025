@@ -28,8 +28,10 @@ basicstyle=\small\ttfamily,
 columns=flexible,
 breaklines=true
 }
-
-\usepackage{emoji}
+\usepackage[normalem]{ulem}
+% \usepackage{emoji}
+\usepackage{twemojis}
+\newcommand{\emoji}[1]{\scalebox{2}{\twemoji{#1}}}
 \usepackage{subcaption}
 
 
@@ -55,22 +57,22 @@ breaklines=true
 
 \linespread{0.6}
 
-% \setbeamertemplate{background}%
-% {%
-%     \begin{tikzpicture}[remember picture,overlay]{\node[yshift=1.5cm,xshift=-2cm,opacity=0.1] at (current page.south east)
-%       {
-%       \includegraphics[scale=0.4, angle=20]{ptaki.pdf}
-%       }
-%       ;
-%     \node[yshift=1.0cm,xshift=0.6cm] (logopos) at (current page.south west) {{\begin{tikzpicture}\shuffleducks\duck[signpost=\insertframenumber, \randomhead,scale=.4]\end{tikzpicture}}};
-%     \pgfmathsetmacro{\progress}{360*(\insertframenumber)/(\inserttotalframenumber)};
-%     \draw[line width=0.2*3pt] ([xshift=0.55cm] logopos)  arc[radius=0.55cm, start angle=0, end angle=\progress];
-%     \fill ([shift={(\progress:0.55cm)}] logopos) circle(1pt);
+\setbeamertemplate{background}%
+{%
+    \begin{tikzpicture}[remember picture,overlay]{\node[yshift=1.5cm,xshift=-2cm,opacity=0.1] at (current page.south east)
+      {
+      \includegraphics[scale=0.4, angle=20]{ptaki.pdf}
+      }
+      ;
+    \node[yshift=1.0cm,xshift=0.6cm] (logopos) at (current page.south west) {{\begin{tikzpicture}\shuffleducks\duck[signpost=\insertframenumber, \randomhead,scale=.4]\end{tikzpicture}}};
+    \pgfmathsetmacro{\progress}{360*(\insertframenumber)/(\inserttotalframenumber)};
+    \draw[line width=0.2*3pt] ([xshift=0.55cm] logopos)  arc[radius=0.55cm, start angle=0, end angle=\progress];
+    \fill ([shift={(\progress:0.55cm)}] logopos) circle(1pt);
 
-%     }
-%         \end{tikzpicture}
+    }
+        \end{tikzpicture}
     
-% }
+}
 
 \newcommand{\SeMPowisko}{%
 \large S\normalsize%
@@ -99,6 +101,16 @@ s%
 
 \frame{\titlepage}
 
+\begin{frame}{Prezentacja}{}
+    Link do prezentacji:
+
+    \url{https://github.com/NKFSUJ/LaTeX2025/tree/master/tikz/tikz.pdf}
+
+    \vspace{0.5cm}
+
+    \scalebox{1.5}{\qrcode{https://github.com/NKFSUJ/LaTeX2025/tree/master/tikz/tikz.pdf}}
+\end{frame}
+
 \section{Co to \Tikz}
 
 \begin{frame}{Co to \Tikz}
@@ -117,7 +129,7 @@ tak jak zawsze:
 szukamy w ulubionej wyszukiwarce internetowej \texttt{ctan tikz}...
 \onslide<2->\begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{tikz/Zrzut ekranu 2024-11-29 120331.png}
+    \includegraphics[width=\textwidth]{tikz/Zrzut_ekranu_2024-11-29_120331.png}
 \end{figure}
 \only<3->{klikamy w pierwszy link...\footnote{to nie jest ten link. to nie jest również moja ulubiona wyszukiwarka}}
 \end{frame}
@@ -126,7 +138,7 @@ szukamy w ulubionej wyszukiwarce internetowej \texttt{ctan tikz}...
     ...otwieramy dokumentację...
     \begin{figure}
         \centering
-        \includegraphics[width=0.6\textwidth]{tikz/Zrzut ekranu 2024-11-29 125324.png}
+        \includegraphics[width=0.6\textwidth]{tikz/Zrzut_ekranu_2024-11-29_125324.png}
         \caption{ładny rysunek}
     \end{figure}
 \end{frame}
@@ -135,8 +147,8 @@ szukamy w ulubionej wyszukiwarce internetowej \texttt{ctan tikz}...
     ...płaczemy...
     \begin{figure}
         \centering
-        \includegraphics[width=0.9\textwidth]{tikz/Zrzut ekranu 2024-11-29 130423.png}
-        \caption{\emoji{loudly-crying-face}}
+        \includegraphics[width=0.9\textwidth]{tikz/Zrzut_ekranu_2024-11-29_130423.png}
+        \caption{\emoji{loudly crying face}}
     \end{figure}
 \end{frame}
 
@@ -144,8 +156,8 @@ szukamy w ulubionej wyszukiwarce internetowej \texttt{ctan tikz}...
     ...szukamy lepszego pdfa
     \begin{figure}
         \centering
-        \includegraphics[width=0.8\textwidth]{tikz/Zrzut ekranu 2024-11-29 132732.png}
-        \caption{Z tego \texttt{pdf}a się uczyłem\footnote{tydzień temu}, i z niego będę uczył was}
+        \includegraphics[width=0.8\textwidth]{tikz/Zrzut_ekranu_2024-11-29_132732.png}
+        \caption{Z tego \texttt{pdf}a się uczyłem\footnote{\sout{tydzień} rok temu}, i z niego będę uczył was}
     \end{figure}
 \end{frame}
 
@@ -303,6 +315,43 @@ oraz tak:
 ale jeszcze nie wiemy, że możemy tak:
 
 \verb|orange!80!black| \textcolor{orange!80!black}{pomarańczowy}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Grubość linii}
+\verb|\draw[...] (0,0) -- (0,1);|
+ultra thin
+\begin{tikzpicture}
+    \draw[ultra thin] (0,0) -- (0,1);
+\end{tikzpicture}
+very thin
+\begin{tikzpicture}
+    \draw[very thin] (0,0) -- (0,1);
+\end{tikzpicture}
+thin
+\begin{tikzpicture}
+    \draw[thin] (0,0) -- (0,1);
+\end{tikzpicture}
+semithick
+\begin{tikzpicture}
+    \draw[semithick] (0,0) -- (0,1);
+\end{tikzpicture}
+thick
+\begin{tikzpicture}
+    \draw[thick] (0,0) -- (0,1);
+\end{tikzpicture}
+very thick
+\begin{tikzpicture}
+    \draw[very thick] (0,0) -- (0,1);
+\end{tikzpicture}
+ultra thick
+\begin{tikzpicture}
+    \draw[ultra thick] (0,0) -- (0,1);
+\end{tikzpicture}
+    
+\end{frame}
+
+\begin{frame}[fragile]{Style linii}{}
     
 \end{frame}
 
@@ -492,6 +541,32 @@ ale jeszcze nie wiemy, że możemy tak:
 \end{lstlisting}
 \begin{tikzpicture}
     \draw[<->, thick, orange] (3,0) arc [start angle=180, end angle=390, radius=2 cm] -- (5,0) -- cycle;
+\end{tikzpicture}
+\end{columns}
+
+    
+\end{frame}
+
+\begin{frame}[fragile]{Ł:u:k:i}{}
+\begin{columns}
+\column{0.5\textwidth}
+\begin{lstlisting}
+\begin{tikzpicture}
+    \draw[->, dashed, fill=orange, very thick] (3,0) arc (0:90:3cm);
+\end{tikzpicture}
+\end{lstlisting}
+\begin{tikzpicture}
+    \draw[->, dashed, fill=orange, very thick] (3,0) arc (0:90:3cm);
+\end{tikzpicture}
+
+\column{0.5\textwidth}
+\begin{lstlisting}
+\begin{tikzpicture}
+    \draw[<->, thick, orange] (3,0) arc (180:390:2cm) -- (5,0) -- cycle;
+\end{tikzpicture}
+\end{lstlisting}
+\begin{tikzpicture}
+    \draw[<->, thick, orange] (3,0) arc (180:390:2cm) -- (5,0) -- cycle;
 \end{tikzpicture}
 \end{columns}
 
@@ -827,94 +902,94 @@ Zadanie 3:
 
      \begin{figure}
         \centering
-        \includegraphics[width=0.8\textwidth]{tikz/Zrzut ekranu 2024-12-07 111654.png}
+        \includegraphics[width=0.8\textwidth]{tikz/Zrzut_ekranu_2024-12-07_111654.png}
         \href{link do dokumentacji}{https://sunsite.icm.edu.pl/pub/CTAN/graphics/pgf/contrib/tikzducks/tikzducks-doc.pdf}
     \end{figure}
 \end{frame}
 
 
 
-\begin{frame}[fragile]{Co potrafią kaczki?}
-    \begin{itemize}
-        \item Wszystko!
-    \end{itemize}
-\colorlet{skin}{white!45!gray!80!green}
+% \begin{frame}[fragile]{Co potrafią kaczki?}
+%     \begin{itemize}
+%         \item Wszystko!
+%     \end{itemize}
+% \colorlet{skin}{white!45!gray!80!green}
 
-\onslide<1->{
-\begin{figure}[h]
-\centering
-    \begin{tikzpicture}%
-  \duck[
-    lightsaber,
-    body=skin,
-    bill=gray!80!green,
-    tshirt=brown!50!black,
-    jacket=brown!30!gray
-  ];
-  \fill[skin,rounded corners=3] (0.44,1.70) -- (0.25,2) -- (0.6,1.95);
-  \fill[skin,rounded corners=3] (1.34,1.60) -- (1.53,1.9) -- (1.16,1.85);
-\end{tikzpicture}%
-%
-\hspace{0.2\textwidth}
-\begin{tikzpicture}%
-  \duck[
-    grumpy,
-    lightsaber=red,
-    cape=black!85!white,
-    body=black!70!white,
-    darthvader=black!85!white
-  ]
-\end{tikzpicture}%
-%
-\hspace{0.2\textwidth}
-%
-\begin{tikzpicture}%
-  \fill[brown!70!black] (0.5,1.65) circle (0.25);
-  \duck[
-    jacket=white!85!brown,
-    body=brown!50!white,
-    shorthair=brown!70!black,
-    lightsaber=cyan
-  ]
-  \fill[brown!70!black] (1.3,1.6) circle (0.25);
-\end{tikzpicture}%
-\end{figure}
-}
+% % \onslide<1->{
+% \begin{figure}[h]
+% \centering
+%     \begin{tikzpicture}%
+%   \duck[
+%     lightsaber,
+%     body=skin,
+%     bill=gray!80!green,
+%     tshirt=brown!50!black,
+%     jacket=brown!30!gray
+%   ];
+%   \fill[skin,rounded corners=3] (0.44,1.70) -- (0.25,2) -- (0.6,1.95);
+%   \fill[skin,rounded corners=3] (1.34,1.60) -- (1.53,1.9) -- (1.16,1.85);
+% \end{tikzpicture}%
+% %
+% \hspace{0.2\textwidth}
+% \begin{tikzpicture}%
+%   \duck[
+%     grumpy,
+%     lightsaber=red,
+%     cape=black!85!white,
+%     body=black!70!white,
+%     darthvader=black!85!white
+%   ]
+% \end{tikzpicture}%
+% %
+% \hspace{0.2\textwidth}
+% %
+% \begin{tikzpicture}%
+%   \fill[brown!70!black] (0.5,1.65) circle (0.25);
+%   \duck[
+%     jacket=white!85!brown,
+%     body=brown!50!white,
+%     shorthair=brown!70!black,
+%     lightsaber=cyan
+%   ]
+%   \fill[brown!70!black] (1.3,1.6) circle (0.25);
+% \end{tikzpicture}%
+% \end{figure}
+% % }
 
-% \onslide<3->{
-\begin{columns}
-\column{0.3\textwidth}
-\begin{lstlisting}
-\duck[
-    lightsaber,
-    body=white!45!gray!80!green,
-    bill=gray!80!green,
-    tshirt=brown!50!black,
-    jacket=brown!30!gray
-]
-\end{lstlisting}
-\column{0.3\textwidth}
-\begin{lstlisting}
-\duck[
-    grumpy,
-    lightsaber=red,
-    cape=black!85!white,
-    body=black!70!white,
-    darthvader=black!85!white
-]
-\end{lstlisting}
-\column{0.3\textwidth}
-\begin{lstlisting}
-\duck[
-    lightsaber=cyan,
-    jacket=white!85!brown,
-    body=brown!50!white,
-    shorthair=brown!70!black
-]
-\end{lstlisting}
-\end{columns}
-% }
-\end{frame}
+% % \onslide<3->{
+% \begin{columns}
+% \column{0.3\textwidth}
+% \begin{lstlisting}
+% \duck[
+%     lightsaber,
+%     body=white!45!gray!80!green,
+%     bill=gray!80!green,
+%     tshirt=brown!50!black,
+%     jacket=brown!30!gray
+% ]
+% \end{lstlisting}
+% \column{0.3\textwidth}
+% \begin{lstlisting}
+% \duck[
+%     grumpy,
+%     lightsaber=red,
+%     cape=black!85!white,
+%     body=black!70!white,
+%     darthvader=black!85!white
+% ]
+% \end{lstlisting}
+% \column{0.3\textwidth}
+% \begin{lstlisting}
+% \duck[
+%     lightsaber=cyan,
+%     jacket=white!85!brown,
+%     body=brown!50!white,
+%     shorthair=brown!70!black
+% ]
+% \end{lstlisting}
+% \end{columns}
+% % }
+% \end{frame}
 
 
 % \begin{frame}{Pacz też}
@@ -929,7 +1004,7 @@ Zadanie 3:
 
 \centering
     \begin{tikzpicture}
-      \duck[parrot, body=gray!30!yellow, head=gray!30!yellow, bill=red, torch=gray!70!brown, tshirt=white!20!black, strawhat=brown!50!white, ribbon=gray, bowtie=blue!50!white]
+      \duck[parrot, body=gray!30!yellow, head=gray!30!yellow, bill=red, torch=gray!70!brown, tshirt=white!20!black, strawhat=brown!50!white, ribbon=gray, bowtie=green!50!white]
       %\addwater{blue!50!cyan}
       \fill[cyan!20!white] (-1.4,1.8) ellipse (1.8 and 0.5);
   \fill[cyan!20!white] (-0.2,1.54) -- (0.2,1.35) -- (0.0,1.6) -- cycle;
