@@ -25,7 +25,7 @@ Obwody elektryczne 10:30-11:20 (Grzegorz Żmija 🐍)
 
 [Tryb chemiczny](chemia/tryb_chemiczny.pdf) 11:30-12:30 (Natalia Gajewska 🐱)
 
-Prezentacje 12:40-13:40 (Krzysztof Prościński 🐞)
+[Prezentacje](beamer/LaTeX_prezentacje.pdf) 12:40-13:40 (Krzysztof Prościński 🐞)
 
 [Pizza](https://www.youtube.com/watch?v=rHnRs54hv4o) 13:40-14:20 🍕
 
