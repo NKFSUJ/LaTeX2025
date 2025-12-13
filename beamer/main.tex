@@ -1,0 +1,60 @@
+\documentclass[9pt]{beamer}
+\usetheme{Cracow}
+%
+% Copyright 2007, 2012 by Tomasz Kawalec
+% coldatoms.com
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% schemat Cracow jest zmodyfikowanym schematem Warsaw
+% oryginalnie schemat Warsaw używa stylu shadow, a ten z kolei bazuje na stylu split
+% styl split i schemat Warsaw został zmodyfikowany w części footnote tak, by wyświetlana była data i numer slajdu,
+% dodatkowo w części środkowej footnote wyświetlany jest dowolny napis, deklarowany w komendzie \gdzie,
+% ponadto usunięto małe ikonki nawigacji na prezentacji oraz zmieniono proporcje wewnątrz nagłówka slajdów,
+% zmniejszony jest rozmiar czcionki w opcjonalnych tytułach slajdów.
+% używane pliki to: beamerthemeCracow.sty, beamerouterthemeshadow_cracow.sty i beamerouterthemesplit_cracow.sty
+%
+% podstawowe pakiety; wybór niektórych zależy od języka prezentacji (polski/angielski)
+\usepackage[polish]{babel}
+%\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+%\usepackage{graphics}
+\usepackage{multimedia}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{color}
+% aby beamer używał we wzorach czcionki matematycznej, a nie stylu "italik" głównej czcionki prezentacji, należy użyć:
+\usefonttheme{professionalfonts}
+%
+% tutaj należy wpisać tekst, który pojawi się w środkowej części stopki prezentacji:
+\newcommand{\gdzie}{Tekst na dół} %UWAGA: zaleca się, żeby to pole nie było puste
+%
+\title{Tytuł}
+\author{Autor}
+\institute{Uniwersytet Jagielloński}
+\date{07.12.2024}
+%
+\begin{document}
+%
+%STRONA TYTUŁOWA
+\begin{frame}
+\titlepage
+\end{frame}
+%
+\section{Rozdział}
+\subsection{Podrozdział}
+\begin{frame}
+AAA
+\end{frame}
+%
+\begin{frame}
+AAA
+\end{frame}
+%
+\end{document}
+
