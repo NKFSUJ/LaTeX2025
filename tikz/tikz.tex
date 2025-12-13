@@ -319,40 +319,137 @@ ale jeszcze nie wiemy, że możemy tak:
 \end{frame}
 
 \begin{frame}[fragile]{Grubość linii}
-\verb|\draw[...] (0,0) -- (0,1);|
-ultra thin
+\verb|\draw[...] (0,0) -- (1,0);|
+
+{\tt
+\begin{tabular}{ll}
+
+\tt
+
+ultra thin &
 \begin{tikzpicture}
-    \draw[ultra thin] (0,0) -- (0,1);
-\end{tikzpicture}
-very thin
+    \draw[ultra thin] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+very thin &
 \begin{tikzpicture}
-    \draw[very thin] (0,0) -- (0,1);
-\end{tikzpicture}
-thin
+    \draw[very thin] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+thin &
 \begin{tikzpicture}
-    \draw[thin] (0,0) -- (0,1);
-\end{tikzpicture}
-semithick
+    \draw[thin] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+semithick &
 \begin{tikzpicture}
-    \draw[semithick] (0,0) -- (0,1);
-\end{tikzpicture}
-thick
+    \draw[semithick] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+thick &
 \begin{tikzpicture}
-    \draw[thick] (0,0) -- (0,1);
-\end{tikzpicture}
-very thick
+    \draw[thick] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+very thick &
 \begin{tikzpicture}
-    \draw[very thick] (0,0) -- (0,1);
-\end{tikzpicture}
-ultra thick
+    \draw[very thick] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+ultra thick &
 \begin{tikzpicture}
-    \draw[ultra thick] (0,0) -- (0,1);
-\end{tikzpicture}
+    \draw[ultra thick] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+line width = 2mm &
+\begin{tikzpicture}
+    \draw[line width = 2mm] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+\end{tabular}
+}
     
 \end{frame}
 
 \begin{frame}[fragile]{Style linii}{}
     
+\verb|\draw[...] (0,0) -- (1,0);|
+
+{\tt
+\begin{tabular}{ll}
+
+
+-> &
+\begin{tikzpicture}
+    \draw[->] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+<- &
+\begin{tikzpicture}
+    \draw[<-] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+<-> &
+\begin{tikzpicture}
+    \draw[<->] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+dashed &
+\begin{tikzpicture}
+    \draw[dashed] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+dotted &
+\begin{tikzpicture}
+    \draw[dotted] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+densely dashed &
+\begin{tikzpicture}
+    \draw[densely dashed] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+densely dotted &
+\begin{tikzpicture}
+    \draw[densely dotted] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+loosely dashed &
+\begin{tikzpicture}
+    \draw[loosely dashed] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+loosely dotted &
+\begin{tikzpicture}
+    \draw[loosely dotted] (0,0) -- (1,0);
+\end{tikzpicture} \\
+
+double &
+\begin{tikzpicture}
+    \draw[double] (0,0) -- (1,0);
+\end{tikzpicture} \\
+    
+\end{tabular}
+}
+
+\end{frame}
+
+\begin{frame}[fragile]{Trochę przykładów}{}
+    
+    \begin{lstlisting}
+\begin{tikzpicture}
+    \draw[very thick, red, fill=cyan, dotted, double] (0,0) -- (1,2) -- (2,2) -- (2,0) -- cycle;
+    \draw[thin, green!20!black, fill=yellow, draw opacity = 0.8, fill opacity = 0.5, densely dashed]
+        (1,1) -- ++(1,2) -- ++(1,0) -- ++(0,-2) -- cycle;
+\end{tikzpicture}
+    \end{lstlisting}
+    
+\begin{tikzpicture}
+    \draw[very thick, red, fill=cyan, dotted, double] (0,0) -- (1,2) -- (2,2) -- (2,0) -- cycle;
+    \draw[thin, green!20!black, fill=yellow, draw opacity = 0.8, fill opacity = 0.5, densely dashed]
+        (1,1) -- ++(1,2) -- ++(1,0) -- ++(0,-2) -- cycle;
+\end{tikzpicture}
+
 \end{frame}
 
 \begin{frame}[fragile]{Siatki}{}
@@ -514,6 +611,37 @@ ultra thick
 \begin{tikzpicture}
 \coordinate (A) at (0,0);
     \draw[thick, green, fill=yellow] (A) ellipse[x radius={sqrt(2)}, y radius={sin(90)} ] ;
+\end{tikzpicture}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]{Kółko i elipsa}{}
+\begin{columns}
+
+\column{0.5\textwidth}
+\begin{lstlisting}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+    \draw[thick, green, fill=yellow] (A) circle(1 cm) ;
+\end{tikzpicture}
+\end{lstlisting}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+    \draw[thick, green, fill=yellow] (A) circle(1 cm) ;
+\end{tikzpicture}
+    
+\column{0.5\textwidth}
+\begin{lstlisting}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+    \draw[thick, green, fill=yellow] (A) ellipse(sqrt(2) and sin(90)) ;
+\end{tikzpicture}
+\end{lstlisting}
+\begin{tikzpicture}
+\coordinate (A) at (0,0);
+    \draw[thick, green, fill=yellow] (A) ellipse({sqrt(2)} and {sin(90)}) ;
 \end{tikzpicture}
 
 \end{columns}
@@ -703,6 +831,77 @@ ultra thick
 \end{columns}
 \end{frame}
 
+\begin{frame}{Ćwiczenia III}
+
+\begin{columns}
+\column{0.5\textwidth}
+
+\begin{figure}
+    
+\begin{tikzpicture}
+\node at (0,0) [draw, rectangle, shape aspect=2] {Czy X?};
+\node at (-2,-2) [draw, rectangle] {Akcja A};
+\node at (2,-2) [draw, rectangle] {Akcja B};
+\draw[->] (0,0) -- (-1.8,-1.8) node[midway, above left] {tak};
+\draw[->] (0,0) -- (1.8,-1.8) node[midway, above right] {nie};
+\end{tikzpicture}
+
+\caption{coś dla informatyków}
+
+\end{figure}
+\column{0.5\textwidth}
+
+\begin{figure}
+
+\begin{tikzpicture}
+\def\cola{orange!90!black}
+\def\colb{orange!80!black}
+\def\colc{orange!70!black}
+
+% Rysujemy strukturę ręcznie
+\draw[thick, \cola] (0,0) -- (1,0) -- (1.5,0.866) -- (1,1.732) -- (0,1.732) -- (-0.5,0.866) -- cycle;
+\draw[thick, \colb] (1,0) -- (2,0) -- (2.5,0.866) -- (2,1.732) -- (1,1.732);
+
+% Atomy azotu
+\node at (-0.2,0.5) {N};
+\node at (1.2,0.5) {N};
+\node at (2.2,0.5) {N};
+
+% Atomy węgla i tlenu
+\node at (0.5,0.2) {C};
+\node at (1.5,0.2) {C};
+\node[above] at (0.5,1.5) {C=O};
+\node[above] at (2,1.5) {C=O};
+
+% Grupy metylowe (pokolorowane)
+\node[text=\cola] at (-1,0.5) {CH$_3$};
+\node[text=\colb] at (1.5,-0.5) {CH$_3$};
+\node[text=\colc] at (3,0.5) {CH$_3$};
+
+% Wiązania do grup metylowych
+\draw[thick, \colc] (-0.5,0.866) -- (-0.8,0.866);
+\draw[thick, \colb] (1.5,0) -- (1.5,-0.3);
+\draw[thick, \cola] (2.5,0.866) -- (2.8,0.866);
+
+% Legenda
+% \node[text=\cola, anchor=west] at (4,1) {N1-metylowa};
+% \node[text=\colb, anchor=west] at (4,0.5) {N3-metylowa};
+% \node[text=\colc, anchor=west] at (4,0) {N7-metylowa};
+% \node at (1.5,-1.5) {Uproszczony wzór kofeiny};
+
+\end{tikzpicture}
+    
+
+\caption{natalka mnie zabije jak to zobaczy}
+
+\end{figure}
+
+
+
+\end{columns}
+    
+\end{frame}
+
 \section{Rozwiązania}
 
 \begin{frame}[fragile]{Rozwiązania}
@@ -745,10 +944,10 @@ Zadanie 2:
 
 \begin{frame}[fragile]{Rozwiązania}
 Zadanie 3:
-{\small
-\begin{lstlisting}
+{\footnotesize
+\begin{lstlisting}[basicstyle=\scriptsize]
 \begin{tikzpicture}
-    \def\F{3}      % Dlugość wektora sily F
+    \def\F{3}      % Dlugosc wektora sily F
     \def\angle{30} % Kat sily F (w stopniach)
     \def\m{1.5}    % Wysokosc prostokata 
 
@@ -782,6 +981,54 @@ Zadanie 3:
    
 \end{frame}
 
+\begin{frame}[fragile]{Rozwiązania}
+   Zadanie 5:
+\begin{lstlisting}
+\begin{tikzpicture}
+\node at (0,0) [draw, rectangle, shape aspect=2] {Czy X?};
+\node at (-2,-2) [draw, rectangle] {Akcja A};
+\node at (2,-2) [draw, rectangle] {Akcja B};
+\draw[->] (0,0) -- (-1.8,-1.8) node[midway, above left] {tak};
+\draw[->] (0,0) -- (1.8,-1.8) node[midway, above right] {nie};
+\end{tikzpicture}
+\end{lstlisting}
+   
+\end{frame}
+
+
+\begin{frame}[fragile]{Rozwiązania}
+   Zadanie 6:
+\begin{lstlisting}[basicstyle=\scriptsize]
+\begin{tikzpicture}
+\def\cola{orange!90!black}
+\def\colb{orange!80!black}
+\def\colc{orange!70!black}
+
+\draw[thick, \cola] (0,0) -- (1,0) -- (1.5,0.866) -- (1,1.732) -- (0,1.732) -- (-0.5,0.866) -- cycle;
+\draw[thick, \colb] (1,0) -- (2,0) -- (2.5,0.866) -- (2,1.732) -- (1,1.732);
+
+\node at (-0.2,0.5) {N};
+\node at (1.2,0.5) {N};
+\node at (2.2,0.5) {N};
+
+\node at (0.5,0.2) {C};
+\node at (1.5,0.2) {C};
+\node[above] at (0.5,1.5) {C=O};
+\node[above] at (2,1.5) {C=O};
+
+\node[text=\cola] at (-1,0.5) {CH$_3$};
+\node[text=\colb] at (1.5,-0.5) {CH$_3$};
+\node[text=\colc] at (3,0.5) {CH$_3$};
+
+\draw[thick, \colc] (-0.5,0.866) -- (-0.8,0.866);
+\draw[thick, \colb] (1.5,0) -- (1.5,-0.3);
+\draw[thick, \cola] (2.5,0.866) -- (2.8,0.866);
+\end{tikzpicture}
+\end{lstlisting}
+   
+\end{frame}
+
+
 \section{Wykresy}
 
 
@@ -791,7 +1038,7 @@ Zadanie 3:
 \begin{columns}
 \column{0.5\textwidth}
 \footnotesize
-\begin{verbatim}
+\begin{lstlisting}[basicstyle=\scriptsize]
 \begin{tikzpicture}
     % Osie układu współrzędnych
     \draw[->] (-0.5,0) -- (7,0) node[right] {$x$};
@@ -807,7 +1054,7 @@ Zadanie 3:
     % Opis wykresu
     \node[blue] at (4,1.2) {$y = \sin(x)$};
 \end{tikzpicture} 
-\end{verbatim}
+\end{lstlisting}
 
 
 \column{0.5\textwidth}
